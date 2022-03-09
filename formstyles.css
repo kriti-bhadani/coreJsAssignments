@@ -1,0 +1,27 @@
+.form-section {
+    padding: 30px;
+    background-color: #efefef;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form-section label {
+    font-size: 20px;
+}
+
+.form-section .input-type {
+    width: 100%;
+    padding: 5px 0 5px 8px;
+    margin: 10px 0 5px 0;
+    margin-left: -5px;
+    border-radius: 5px;
+    border: 1px solid #d17070;
+}
+
+
+.form-section span {
+    color: #e21b1b;
+    font-size: 16px;
+    font-weight: 500;
+}

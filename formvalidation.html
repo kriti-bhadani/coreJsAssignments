@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Javascript">
+        <meta name="keywords" content="Javascript Tutorial">
+        <meta name="author" content="Kriti Bhadani">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./formstyles.css">
+    </head>
+    <body>
+        <form class="form-section" action="success.html" novalidate>
+            <label for="firstname">FirstName:</label>
+            <input class="input-type" type="text" id="firstname" onblur="validate1()"><br>
+            <span id="nameerror"></span><br><br>
+            <label for="email">Email-Id:</label>
+            <input class="input-type" type="email" id="email" onblur="validate2()"><br>
+            <span id="emailerror"></span><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input class="input-type" type="text" id="mobile" onblur="validate3()"><br>
+            <span id="mobileerror"></span><br><br>
+
+            <label for="pass">Password:</label>
+            <input class="input-type" type="password" id="pass" onblur="validate4()"><br>
+            <span id="passerror"></span><br><br>
+            
+            <label for="confirmpass">Confirm Password:</label>
+            <input class="input-type" type="password2" id="confirmpass" onblur="validate5()"><br>
+            <span id="conpasserror"></span><br><br>
+            
+            <label>Show Password:
+                <input type="checkbox" id="showp" onclick="Toggle()">
+            </label><br>
+            <span id="showpasserror"></span><br><br>
+            
+           <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+            </form>
+            
+        <script src="./validation.js"></script>
+    </body>
+</html>

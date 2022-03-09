@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+	<link rel="stylesheet" href="./calculator.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="calculator">
+		<div class="display">
+			<input id="screen" type="text" placeholder="0">
+		</div>
+
+		<div class="buttons-type">
+			<div class="row">
+				<button id="ce" onclick="backspc()">CE</button>
+				<button onclick="fact()">x!</button>
+				<button class="btn btn-light">(</button>
+				<button class="btn btn-light">)</button>
+				<button class="btn btn-light">%</button>
+				<button id="ac" onclick="screen.value=''">AC</button>
+			</div>
+
+			<div class="row">
+				<button onclick="sin()">sin</button>
+				<button onclick="pi()">π</button>
+				<button class="btn btn-light">7</button>
+				<button class="btn btn-light">8</button>
+				<button class="btn btn-light">9</button>
+				<button class="btn btn-light">÷</button>
+			</div>
+
+			<div class="row">
+				<button onclick="cos()">cos</button>
+				<button onclick="log()">log</button>
+				<button class="btn btn-light">4</button>
+				<button class="btn btn-light">5</button>
+				<button class="btn btn-light">6</button>
+				<button class="btn btn-light">×</button>
+			</div>
+
+			<div class="row">
+				<button onclick="tan()">tan</button>
+				<button onclick="sqrt()">√</button>
+				<button class="btn btn-light">1</button>
+				<button class="btn btn-light">2</button>
+				<button class="btn btn-light">3</button>
+				<button class="btn btn-light">-</button>
+			</div>
+
+			<div class="row">
+				<button onclick="e()">e</button>
+				<button onclick="pow()">x<span style="position: relative; bottom: .4em; right: .1em;">
+				</span></button>
+				<button class="btn btn-light">0</button>
+				<button class="btn btn-light">.</button>
+				<button id="eval" onclick="screen.value=eval(screen.value)">=</button>
+				<button class="btn btn-light">+</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script>
+		var screen= document.querySelector('#screen');
+		var btn=document.querySelectorAll('.btn');
+		for(item of btn)
+		{
+			item.addEventListener('click',(e)=>{
+				btntext=e.target.innerText;
+				if(btntext=='×')
+				{
+					btntext='*';
+				}
+				if(btntext=='÷')
+				{
+					btntext='/';
+				}
+				screen.value+=btntext;
+			})
+		}
+
+		function sin() 
+		{
+			screen.value=Math.sin(screen.value);
+		}
+
+		function cos() 
+		{
+			screen.value=Math.cos(screen.value);
+		}
+
+		function tan() 
+		{
+			screen.value=Math.tan(screen.value);
+		}
+
+		function pow() 
+		{
+			screen.value=Math.pow(screen.value,2);
+		}
+
+		function sqrt() 
+		{
+			screen.value=Math.sqrt(screen.value,2);
+		}
+
+		function log() 
+		{
+			screen.value=Math.log(screen.value);
+		}
+
+		function pi() 
+		{
+			screen.value= 3.14159;
+		}
+
+		function e() 
+		{
+			screen.value=2.718;
+		}
+
+		function fact()
+		{
+			var i, num, f;
+			f=1
+			num=screen.value;
+			for(i=1; i<=num; i++)
+			{
+				f=f*i;
+			}
+
+			i=i-1;
+
+			screen.value=f;
+		}
+
+		function backspc()
+		{
+			screen.value=screen.value.substr(0,screen.value.length-1);
+		}
+	</script>
+</body>
+
+</html>

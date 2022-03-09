@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Core JS Training</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>		 
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 15px 0;
+            color: #fff;
+		}
+		.table {
+			margin-top: 20px;
+			counter-reset: section;
+		}
+		th {
+			background-color: #212529;
+			color: #fff;
+		}
+		.table tbody tr td:first-child::before {
+			counter-increment: section;
+			content: counter(section);
+		}
+		
+	</style>
+</head>
+
+<body>
+	<header class="bg-primary">
+		<h3 class="text-center">Core JS Training</h3>
+	</header>
+	<main>
+		<div class="container">
+            <div class="col-md-6 mx-auto">
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Assignment Name</th>
+                            <th>Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+                            <td><a href="todolist.html">To Do List</a></td>
+                            <td>17/02/2022</td>
+                        </tr>
+                        <tr>
+							<td></td>
+                            <td><a href="formvalidation.html">Form Validation</a></td>
+                            <td>18/02/2022</td>
+                        </tr>
+                        <tr>
+							<td></td>
+                            <td><a href="slider.html">Slider</a></td>
+                            <td>19/02/2022</td>
+                        </tr>
+                        <tr>
+							<td></td>
+                            <td><a href="fetchpost.html">Fetch Post</a></td>
+                            <td>28/02/2022</td>
+                        </tr>
+                        <tr>
+							<td></td>
+                            <td><a href="fetchuser.html">Fetch User</a></td>
+                            <td>01/03/2022</td>
+                        </tr>
+                        <tr>
+							<td></td>
+                            <td><a href="calculator.html">Calculator</a></td>
+                            <td>04/03/2022</td>
+                        </tr>
+					</tbody>
+				</table>
+			</div>
+        </div>
+		</div>
+	</main>
+</body>
+
+</html>
